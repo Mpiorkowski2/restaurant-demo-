@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script src="javascript.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="head">
+            <div class="re">
+        <img class="logo" src="pics2/Logo.png" alt="logo"> 
+            </div>
+           
+             <ul class="nav-list">
+               <li><a class="rn" href="../index.html">Home</a> </li>
+               <li><a class="rn" href="../pages/About.html">About</a> </li>
+               <li><a class="rn" href="menu.html">Menu</a> </li>
+               <li><a class="rn" href="../pages/reservation.html">Reservation</a> </li>
+               <li><a class="rn" href="../pages/contact.html">Contact</a> </li>
+
+            </ul>  
+        
+
+        <div class="dropdown">
+            <button class="dropbtn">☰</button>
+            <div class="dropdown-content">
+                <a class="n" href="../index.html">Home</a> 
+                <a class="n" href="../pages/About.html">About</a> 
+                <a class="n" href="menu.html">Menu</a> 
+                <a class="n" href="../pages/reservation.html">Reservation</a> 
+                <a class="n" href="../pages/contact.html">Contact</a> 
+            </div>
+
+        </div>
+        <button class="phone-number">Call Now!</button>
+    
+    </div>
+    </div>
+ </header>
+
+ <div class="menuss">
+    <div class="menu-ops">
+        <button  class="brunch" onclick="showBrunch()"  >Brunch Menu</button>
+        <button  class="dinner" onclick="showDinner()" >Dinner Menu</button>
+        <button class="reserv" onclick="window.location.href='../pages/reservation.html'">Reserve Table</button>
+
+    </div>
+
+    <div id="brunchImg" class="brunch-img">
+     <img class="b-im" src="pics2/Orange and Black Bold Geometric Restaurant Menu.png" width="700">
+    </div>
+
+    <div id="dinnerImg" class="dinner-img">
+        <img class="d-im" src="pics2/dinenrmenu.png" width="700" alt="dinner menu">
+    </div>
+
+   
+
+
+ </div>
+
+ <footer>
+    <div class="footer">
+        <img src="pics2/Logo.png" alt="logo" width="auto" height="70px"> 
+        <div class="links-6">
+          <ul>
+            <li><a class="f-a" href="#">Instagram</a> </li>
+            <li><a class="f-a" href="#">X</a> </li>
+            <li><a class="f-a" href="#">Privacy Policy</a> </li>
+            <li><a class="f-a" href="#">Shop Policy</a> </li>
+            <li><a class="f-a" href="#">Terms of Service</a> </li>
+          </ul>
+       </div>
+
+        <p>@ 2024 Resturnat</p>
+
+    </div>
+</footer>
+
+ <script>
+   function showBrunch(){
+    document.getElementById('dinnerImg').style.display = 'none';
+    document.getElementById('brunchImg').style.display = 'block';
+   }
+
+   function showDinner(){
+    document.getElementById('brunchImg').style.display = 'none';
+    document.getElementById('dinnerImg').style.display = 'block';
+   }
+
+
+   showBrunch()
+ </script>
+    
+    
+</body>
+</html>
