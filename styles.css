@@ -3,14 +3,9 @@
 }
 
 body {
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    margin: 0;
+    font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
+        margin: 0;
     padding: 0;
-}
-
-.logo {
-    width: auto;
-    height: 80px;
 }
 
 .head {
@@ -46,6 +41,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     margin-right: auto;
+    font-size: 18px;
 }
 
 
@@ -102,7 +98,7 @@ body {
     
 }
 .dropdown:hover .dropbtn {
-    background-color: rgb(255 121 0 / 70%);
+    background-color: rgb(255, 159, 76);
 }
 
 .n{
@@ -117,7 +113,7 @@ body {
     transition: color 0.15s ease;
 }
 
-@media (max-width: 1040px ){
+@media (max-width: 1090px ){
  .dropdown, .dropbtn, .n{
     display: block;
  }
@@ -132,13 +128,28 @@ body {
     color: rgb(0, 0, 0);
     text-decoration: none;
     transition: color 0.3 ease;
+    position: relative;
     
 }
 .rn:hover, .rn:active,
  .f-a:hover, .f-a:active{
-    text-decoration: underline;
-    color: rgba(0, 0, 0, 0.554);
-    transition: color 0ease;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s ease;
+    
+}
+.rn::after, .f-a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: black;
+    transition: width 0.4s ease-in-out;
+}
+
+.rn:hover::after, .f-a:hover::after {
+    width: 100%; /* Animates the underline width from 0 to full */
 }
 .phone-number {
     
@@ -165,9 +176,13 @@ body {
     width: 200px;
     will-change: transform;
 }
+.phone-number .but-cal{
+    color: black;
+    text-decoration: none;
+}
 .phone-number:hover {
     color: #fff;
-    background-color: rgb(255 121 0 / 70%);
+    background-color: rgb(255, 159, 76);
     border-radius: 25px;
     transform: translateY(-2px);
 }
@@ -181,10 +196,10 @@ body {
 .promo {
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-top: 20px;
     font-size: small;
-    background-color: rgb(255 121 0 / 70%);
-    padding: 3px;
+    background-color: rgb(255, 159, 76);
+    
 }
 @keyframes pulse {
     0% {
@@ -202,12 +217,12 @@ body {
 }
 .rt {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(238, 238, 238);
     cursor: pointer;
 }
 .rt:hover, .rt:active {
     text-decoration: underline;
-    color: rgb(195, 255, 156);
+    color: rgb(255, 255, 255);
 }
 @media (max-width: 750px) {
     .nav-list {
@@ -215,7 +230,13 @@ body {
         gap: 20px;
     }
 
-    .phone-number {
+    .phone-number{
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .but-cal{
         margin: 10px 0;
         width: 100%;
         text-align: center;
@@ -239,7 +260,7 @@ body {
 
 
 .sec-1{
-    background-image: url('pics/typical-french-restaurant-scene-tables-chairs.jpg');
+    background-image: url('https://img.freepik.com/free-photo/typical-french-restaurant-scene-tables-chairs_1147-445.jpg?t=st=1728338475~exp=1728342075~hmac=7ae40d2d983adae8e6a3953b08ec50ec47d5ff6e0ffa4e83bad0932bd6d353ae&w=1800');
     background-size: cover;
     background-position: center;
     height: 80vh;
@@ -266,27 +287,28 @@ body {
     text-shadow:
     3px 3px 0 rgb(147, 147, 147);
     
-
 }
-
 .p-sec{
     font-size: 25px;
-    margin-top: 25px;
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: 100;
 }
 .button-sec{
-    margin-top: 35px;
+    margin-top: 25px;
+    padding-bottom: 30px;
 }
 .button-sec button{
     
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     border: 0px solid black;
-    border-radius: 25px;
+    border-radius: 39px;
     box-sizing: border-box;
     cursor: pointer;
     display: inline-block;
     font-size: 26px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: normal;
     margin: 0px;
     min-height: 20px;
@@ -304,16 +326,21 @@ body {
 .button-sec button:hover {
     color: #ffffff;
     background-color: rgb(255, 159, 76);
-    border-radius: 25px;
+    border-radius: 35px;
     transform: translateY(-2px);
     padding: 12px 24px;
-    border: 2px solid rgb(255, 255, 255);
+    
 }
 .button-sec button:active {
     box-shadow: none;
     transform: translateY(0);
 }
-
+@media(max-width:460px){
+    .head-sec{
+        font-size: 60px;
+    }
+    
+}
 
 
 
@@ -338,7 +365,7 @@ body {
 .two-words{
     display: flex;
     flex-direction: column;
-    padding: 0px 20px;
+    padding: 50px 20px;
     flex-basis: auto;
     min-width: 300px;
     flex: 1;
@@ -356,7 +383,7 @@ body {
 .two-words button{
     color: rgb(0, 0, 0);
     background-color: transparent;
-    border: 2px solid black;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 15px;
     box-sizing: border-box;
     cursor: pointer;
@@ -396,18 +423,66 @@ body {
     filter: brightness(0.8);
     background-size: contain;
 }
+@media(max-width:660px){
+    .two img{
+        display: none;
+    }
+    .two{
+        background: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.459)), url("https://img.freepik.com/free-photo/sliced-grilled-beef-steak-served-with-green-salad-with-eggs_140725-5065.jpg?t=st=1728336709~exp=1728340309~hmac=3fe56510d917fdaed54ea86fc28f816a3d466a35f4dd7014d93760df91ab6845&w=900") center/cover no-repeat;
+        color: white;
+        
+    }
+    .two-words{
+        color: rgb(255, 255, 255);
+    }
+    .two-words button{
+        color: rgb(255, 255, 255);
+        background-color: transparent;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 15px;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0px;
+        min-height: 20px;
+        min-width: 0;
+        outline: none;
+        padding: 6px 14px;
+        text-decoration: none;
+        transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 300px;
+        will-change: transform;
+    }
+    .two-words button:hover {
+        color: #fff;
+        background-color: #ff6a00;
+        border-radius: 16px;
+        transform: translateY(-2px);
+    }
+    .two-words button:active {
+        box-shadow: none;
+        transform: translateY(0);
+    }
+    .cool-line{
+        display: block;
+    }
+} 
 
 
-.under-2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.cool-line{
+   
+    display: none;
     width: auto;
-    height: 50px ;
+    height: 80px ;
     font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: oblique;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0)), url("pics/line.svg") center/cover no-repeat;
+   
     background-color: #cbcbcb3b;
     color: #927c68;
 }
@@ -421,8 +496,10 @@ body {
     background-color: #e9e9e939;
     align-items: center;
     flex-wrap: wrap;
-    padding: 100px 0px;
+    padding: 50px 0px;
     gap: 5px;
+    /*background: linear-gradient(rgba(255, 255, 255, 0.092), rgba(255, 255, 255, 0.164)), url("pics/bottomone.svg.svg") center/cover no-repeat;*/
+
 }
 .three-div{
     background-color: #dfdfdf6b;
@@ -452,12 +529,14 @@ body {
     margin-bottom: 25px;
     font-size: large;
     font-weight: bolder;
+    font-weight: 700;
 }
 .Top-B{
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
     text-align: center;
+    font-weight: 200;
 }
 .button-3 button{
     color: rgb(0, 0, 0);
@@ -492,6 +571,7 @@ body {
 .button-3 button:active {
     box-shadow: none;
     transform: translateY(0);
+    transition: 0.2s;
 }
 
 
@@ -505,7 +585,16 @@ body {
     flex-wrap: wrap;
     padding: 20px 0px;
     gap: 100px;
+    background: linear-gradient(rgba(255, 255, 255, 0.092), rgba(255, 255, 255, 0.164)), url("pics/bluesvg.svg") center/cover no-repeat;
 }
+@media(max-width: 620px){
+    .four{ background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("pics/vert.svg") center/cover no-repeat;
+    }
+    /*.three{background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("pics/4.sccsaf.svg") center/cover no-repeat;
+
+    }*/
+}
+
 @media (max-width: 720px){
    
     .four{
@@ -528,13 +617,14 @@ body {
     
 }
 .icon{
-    fill: rgb(255, 159, 76);
+    fill: rgb(0, 0, 0);
     width: 40px;
     height: 50px;
 }
 .t-4{
 font-weight: bold;
 font-size: 20px;
+font-weight: 700;
 }
 .sm-4{
     display: flex;
@@ -578,7 +668,7 @@ font-size: 20px;
 }
 .button-4 button:hover {
     color: #fff;
-    background-color: #1A1A1A;
+    background-color: rgb(255 121 0);;
     border-radius: 16px;
     transform: translateY(-2px);
 }
@@ -600,83 +690,89 @@ font-size: 20px;
     flex-wrap: wrap;
     gap: 20px;
 }
-@media(max-width: 600px){
-    .five{
+
+@media (max-width: 600px) {
+    .five {
         height: 400px;
     }
 }
-.icon-5{
-    display: flex;
-    justify-content: flex-start;
-    background-color: #e9e9e939;;
-}
-.email{
+
+.email {
     font-size: 50px;
     font-family: 'Times New Roman', Times, serif;
     width: auto;
-    
-    
     text-align: center;
-    color: #7d6e48;
-   
+    color: #958353;
 }
-.ps{
-    color: #7d6e48;
+
+.ps {
+    color: #ffffff;
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
-    
     text-align: center;
 }
-.inputs{
+
+.inputs {
     display: flex;
     width: 100%;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 0px px;
+    padding: 0px 0px;
     gap: 10px;
 }
-.inputs input{
-    flex-grow: 2;
-    min-width: 00px;
-    
+
+.inputs form {
+    width: 100%; /* Ensure form takes full width */
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.inputs input {
+    flex-grow: 2; /* Make inputs flexible */
+    min-width: 200px; /* Ensure minimum size */
     min-height: 40px;
     padding: 6px 14px;
     border-radius: 15px;
-    border: 2px solid black ;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    border: 2px solid black;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
 .inputs button {
     flex-grow: 1;
     min-width: 300px;
-
     min-height: 40px;
     padding: 6px 14px;
     border-radius: 15px;
     cursor: pointer;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 16px;
     transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
     background-color: #7d6e48;
     color: white;
     border: 2px solid #7d6e48;
-    
 }
+
 .inputs button:hover {
-    color: #988657 ;
+    color: #988657;
     background-color: #ffffff;
     border-radius: 16px;
     transform: translateY(-2px);
 }
+
 .inputs button:active {
     box-shadow: none;
     transform: translateY(0);
 }
-.name-input:focus::placeholder, .email-input:focus::placeholder {
+
+.name-input:focus::placeholder, 
+.email-input:focus::placeholder {
     color: transparent; /* Hides placeholder text on focus */
 }
+
 .inputs input:invalid {
     border: 2px solid rgb(255, 0, 0);
-    
 }
 
 .name-input, .email-input {
@@ -717,3 +813,62 @@ font-size: 20px;
     
 }
 
+.twotwo{
+    display: flex;
+    flex-direction: column;
+    background-color: #e2e2e2;
+    padding: 40px;
+    color: rgb(0, 0, 0);
+    
+}
+.footer-boxes{
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+.location{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 2px solid black;
+    padding: 4px;
+}
+.loc h2{
+    font-weight: 200;
+}
+.loc p{
+    font-weight: 100;
+}
+.loc a{
+    color: black;
+    text-decoration: none;
+}
+.loc a:hover{
+    text-decoration: underline;
+}
+.locc{
+    display: flex;
+    gap: 25px;
+    
+}
+.keep a{
+    font-style: none;
+    text-decoration: none;
+}
+.keep h2{
+    font-size: 25px;
+    font-weight: 200;
+}
+.keep svg:hover{
+    background-color: rgba(0, 0, 0, 0.072);
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.keep svg{
+    padding: 4px;
+    transform: translateY(-2px);
+    transition: 0.3s;
+    
+}
