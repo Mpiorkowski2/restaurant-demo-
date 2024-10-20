@@ -51,10 +51,6 @@ body {
     position: relative;
     display: inline-block;
 }
-.dropbtn a{
-    text-decoration: none;
-    color: black;
-    }
 .dropbtn {
     display: none;
     border: 2px solid black;
@@ -592,7 +588,7 @@ body {
     background: linear-gradient(rgba(255, 255, 255, 0.092), rgba(255, 255, 255, 0.164)), url("pics/bluesvg.svg") center/cover no-repeat;
 }
 @media(max-width: 620px){
-    .four{ background: linear-gradient(rgba(255, 255, 255, 0.084), rgba(255, 255, 255, 0)), url("pics/vert.svg") center/cover no-repeat;
+    .four{ background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("pics/vert.svg") center/cover no-repeat;
     }
     /*.three{background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("pics/4.sccsaf.svg") center/cover no-repeat;
 

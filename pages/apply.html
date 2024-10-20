@@ -50,7 +50,7 @@
     <div class="form-containter">
 
         <form class="form" action="https://docs.google.com/forms/d/e/1FAIpQLSet5hSgSnlysYyMLqNJx3ZGwIyYouie2glpOcLkjDio-PqIxw/formResponse"
-        method="POST" target="_self">
+        method="GET" target="_blank">
             
             <p>First Name<input  required name="entry.217853965" type="text" ="First Name"></p>
             <p>Last Name<input required name="entry.1149327221" type="text" ="Last Name"></p>
@@ -148,4 +148,13 @@
 
    </footer>
 </body>
+
+<script src="javascript.js" >
+
+
+    document.getElementById("signupForm").onsubmit = function() {
+        window.open(this.action, '_blank');
+    };
+
+</script>
 </html>
