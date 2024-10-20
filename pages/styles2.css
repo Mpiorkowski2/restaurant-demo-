@@ -57,11 +57,16 @@ body {
     position: relative;
     display: inline-block;
 }
+.dropbtn a{
+text-decoration: none;
+color: black;
+}
+
 .dropbtn {
     display: none;
     border: 2px solid black;
     background-color: #ffffff;
-    color: balck;
+    color: black;
     padding: 16px;
     font-size: 16px;
     width: 70px;
