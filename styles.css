@@ -776,7 +776,7 @@ font-weight: 700;
     color: transparent; /* Hides placeholder text on focus */
 }
 
-.inputs input:invalid {
+.inputs input:focus:invalid {
     border: 2px solid rgb(255, 0, 0);
 }
 
